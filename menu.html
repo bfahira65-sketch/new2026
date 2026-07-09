@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Demo</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.header{
+width:95%;
+max-width:1200px;
+margin:20px auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.title{
+color:gold;
+font-size:28px;
+font-weight:bold;
+}
+
+.menu-btn{
+padding:12px 25px;
+background:gold;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.grid{
+
+width:95%;
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+padding-bottom:40px;
+
+}
+
+.card{
+
+background:#1b1b1b;
+
+border-radius:15px;
+
+padding:20px;
+
+text-align:center;
+
+box-shadow:0 0 20px rgba(255,215,0,.15);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.logo{
+
+height:100px;
+
+border-radius:10px;
+
+background:#333;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:45px;
+
+margin-bottom:15px;
+
+color:gold;
+
+}
+
+.card h3{
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+.card button{
+
+width:100%;
+
+padding:12px;
+
+background:gold;
+
+border:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.footer{
+
+text-align:center;
+
+margin:30px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="title">
+Portal Demo
+</div>
+
+<button class="menu-btn" onclick="window.location='dashboard.html'">
+← Dashboard
+</button>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="logo">🎮</div>
+<h3>Demo 1</h3>
+<button onclick="buka('Demo 1')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🧩</div>
+<h3>Demo 2</h3>
+<button onclick="buka('Demo 2')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🚀</div>
+<h3>Demo 3</h3>
+<button onclick="buka('Demo 3')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">📱</div>
+<h3>Demo 4</h3>
+<button onclick="buka('Demo 4')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">💎</div>
+<h3>Demo 5</h3>
+<button onclick="buka('Demo 5')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">⭐</div>
+<h3>Demo 6</h3>
+<button onclick="buka('Demo 6')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🎲</div>
+<h3>Demo 7</h3>
+<button onclick="buka('Demo 7')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🕹️</div>
+<h3>Demo 8</h3>
+<button onclick="buka('Demo 8')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🌟</div>
+<h3>Demo 9</h3>
+<button onclick="buka('Demo 9')">Buka Demo</button>
+</div>
+
+<div class="card">
+<div class="logo">🔥</div>
+<h3>Demo 10</h3>
+<button onclick="buka('Demo 10')">Buka Demo</button>
+</div>
+
+</div>
+
+<script>
+
+function buka(nama){
+
+localStorage.setItem("demo",nama);
+
+window.location="play.html";
+
+}
+
+</script>
+
+</body>
+</html>
