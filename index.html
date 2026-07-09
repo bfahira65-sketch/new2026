@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Portal</title>
-
+    <title>Dashboard Member</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="dashboard">
 
-    <div class="login-box">
+    <div class="profile-card">
 
-        <h1>MEMBER PORTAL</h1>
+        <h1>Dashboard Member</h1>
 
-        <p>Silakan Login</p>
+        <div class="avatar">
+            👤
+        </div>
 
-        <input type="text" id="username" placeholder="Username">
+        <div class="info">
+            <label>Username</label>
+            <input type="text" id="username" readonly>
 
-        <input type="password" id="password" placeholder="Password">
+            <label>Nama</label>
+            <input type="text" value="Demo Member" readonly>
 
-        <button onclick="login()">LOGIN</button>
+            <label>ID Anggota</label>
+            <input type="text" value="MBR-2026-001" readonly>
 
-        <button class="register">DAFTAR</button>
+            <label>Status</label>
+            <input type="text" value="Aktif" readonly>
+        </div>
+
+        <button onclick="menu()">Masuk Menu Demo</button>
+
+        <button class="logout" onclick="logout()">Logout</button>
 
     </div>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+document.getElementById("username").value =
+localStorage.getItem("username") || "-";
+
+function menu(){
+    window.location="menu.html";
+}
+
+function logout(){
+    localStorage.clear();
+    window.location="index.html";
+}
+</script>
 
 </body>
 </html>
