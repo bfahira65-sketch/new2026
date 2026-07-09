@@ -2,533 +2,187 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Login TOKOBET</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo TOKOBET</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
-    font-family:Arial, sans-serif;
     background:#f5f5f5;
+    padding:20px;
 }
 
 .container{
-    width:380px;
-    margin:50px auto;
-    background:#fff;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    max-width:800px;
+    margin:auto;
 }
 
-input{
+.card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.card img{
     width:100%;
-    padding:12px;
-    margin-top:10px;
-    border:1px solid #ccc;
-    border-radius:6px;
+    display:block;
+}
+
+.content{
+    padding:18px;
+}
+
+.content h2{
+    color:#222;
+    margin-bottom:15px;
 }
 
 button{
     width:100%;
     padding:12px;
-    margin-top:15px;
     background:#3d3d3d;
-    color:white;
+    color:#fff;
     border:none;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
+    font-size:15px;
+    transition:.3s;
 }
 
-#halaman2{
+button:hover{
+    background:#3d3d3d;
+}
+
+.detail{
     display:none;
-}
-
-h3{
-    color:#089a00;
+    margin-top:15px;
+    background:#f8f9fa;
+    border-left:4px solid #3d3d3d;
+    padding:15px;
+    border-radius:8px;
+    line-height:1.6;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
-<!-- LOGO -->
-<div style="text-align:center; margin-bottom:20px;">
+     <!-- Banner 1 -->
+    <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsz3NFL4hVPxMBSc806PaPzZALba8faaziZAqZzJ3gCTnrYLWDpa5B3JFed5Hz_oeOrn8VEWvaUu6EJ8nYHMDp9elmPz6tAbGR9OtP0KZ2_iIqsKm4plK6Dz7zMfXm0svCS2yiT_CAFlrtpTbO6pROcxieM0i-3W3Lwf-0alA1V4I91PxYT-1s39rcXZ0w/s1847/ChatGPT%20Image%20Jul%201,%202026,%2005_14_50%20PM.png" alt="Promo 1">
 
-    <img
-    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh70uu_a46O5xDU597Xk2AQtUy-blJmbLMJ7AVex_wawPhil47vEqO1EcuJVRCG4Xb_Wwj_prGNhPeNrzyTzoEZWGh_XEhCVks_BRtew3qTfipJtZf3SIMGJwcQVE1NXLb2JFcg7ebshzNoNA4y-qJyYKC6uld2sck6Fd0NqkMpy4Du5oFC3xCX0s3_kAXJ/s1536/ChatGPT%20Image%20Jul%201,%202026,%2005_14_57%20PM.png"
-    alt="TOKOBET"
-    style="width:140px; height:auto;">
+        <div class="content">
 
-</div>
+            <h2>Bonus New Member 100%</h2>
 
-<!-- FORM LOGIN -->
-<div id="halaman1">
+            <button onclick="toggleDetail('detail1')">
+                Baca Syarat & Ketentuan
+            </button>
 
-<form id="myForm">
+            <div class="detail" id="detail1">
+                <p>
+                    • Deposit 100rb bonus 100rb.<br>
+                    • Tanpa TO.
+                    • Bebas IP & Gagal WD saldo kembali 100%.<br>
+                </p>
+            </div>
 
-<input type="text" id="nama" placeholder="Nama Pengguna" required>
+        </div>
+    </div>   
 
-<input type="password" placeholder="Kata Sandi" required>
+    <!-- Banner 2 -->
+    <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsz3NFL4hVPxMBSc806PaPzZALba8faaziZAqZzJ3gCTnrYLWDpa5B3JFed5Hz_oeOrn8VEWvaUu6EJ8nYHMDp9elmPz6tAbGR9OtP0KZ2_iIqsKm4plK6Dz7zMfXm0svCS2yiT_CAFlrtpTbO6pROcxieM0i-3W3Lwf-0alA1V4I91PxYT-1s39rcXZ0w/s1847/ChatGPT%20Image%20Jul%201,%202026,%2005_14_50%20PM.png" alt="Promo 1">
 
-<button type="submit">Login Akun</button>
+        <div class="content">
 
-</form>
+            <h2>Bonus New Member 100%</h2>
 
-</div>
+            <button onclick="toggleDetail('detail1')">
+                Baca Syarat & Ketentuan
+            </button>
 
-<!-- FORM SELANJUTNYA -->
-<div id="halaman2">
+            <div class="detail" id="detail1">
+                <p>
+                    • Deposit 100rb bonus 100rb.<br>
+                    • Tanpa TO.
+                    • Bebas IP & Gagal WD saldo kembali 100%.<br>
+                </p>
+            </div>
 
-<h3>✅ Anda telah login.</h3>
+        </div>
+    </div>
 
-<p style="margin-bottom:20px;">
-    <b>Username :</b> <span id="namaUser"></span>
-</p>
+    <!-- Banner 3 -->
+    <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiRxKqPkDbGMYBVJbUrUtXNwe8gC2yeCXHGtLeoLv4aU0eKKmsRFyn5RUTXrCB7HCpZh8ybK0wAFJLGpRG0kfJnatmvQTiw_PPfvVvA6xejkXXpgJGuknzXkSmT0rnEOLTxmsA87Q2CvCvQcvPs5WozUVPecUj4aDoRqyfTkNTpBOiopoUgeVuHi64JvMGN" alt="Promo 2">
 
-<style>
-.bank-card{
-    background:#fff;
-    border:1px solid #ddd;
-    border-radius:12px;
-    margin-bottom:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,.12);
-    overflow:hidden;
-}
+        <div class="content">
 
-.bank-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px;
-    cursor:pointer;
-    transition:.3s;
-}
+            <h2>Promo Harian & Mingguan</h2>
 
-.bank-header:hover{
-    background:#fafafa;
-}
+            <button onclick="toggleDetail('detail2')">
+                Baca Syarat & Ketentuan
+            </button>
 
-.bank-left{
-    display:flex;
-    align-items:center;
-}
+            <div class="detail" id="detail2">
+                <p>
+                    • Berlaku setiap minggu.<br>
+                    • Nominal mengikuti ketentuan promo.<br>
+                    • Tidak dapat digabung dengan promo tertentu.
+                </p>
+            </div>
 
-.bank-logo{
-    width:55px;
-    margin-right:15px;
-}
+        </div>
+    </div>
 
-.bank-name{
-    font-size:28px;
-    font-weight:bold;
-    margin:0;
-}
+    <!-- Banner 4 -->
+    <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrtGMWppfKZQ3XBd0YGLhjLykFyysCwMZ44-TnBz1UQWZpuNDXjppiKDhsAspMrK1cdo-239M8Ibg19S4hbRr6sNq9zDd4lM1E_fJzNpV577tGxnbFmEzsh4sSDuvHfw7PYFB0pZyt3qJWfuRO3X96coF1qhYeANXl2srMC47MOI-2C5_8fJk3FMCuCvPV/s1846/ChatGPT%20Image%20Jul%201,%202026,%2005_15_04%20PM.png" alt="Promo 3">
 
-.bank-sub{
-    color:#666;
-    font-size:14px;
-}
+        <div class="content">
 
-.arrow{
-    font-size:22px;
-    transition:.3s;
-}
+            <h2>Cara Deposit</h2>
 
-.bank-detail{
-    display:none;
-    padding:18px;
-    border-top:1px solid #eee;
-}
+            <button onclick="toggleDetail('detail3')">
+                Baca Syarat & Ketentuan
+            </button>
 
-.info{
-    margin-bottom:18px;
-}
+            <div class="detail" id="detail3">
+                <p>
+                    • Minimal Deposit Rp 20.000.<br>
+                    • Minimal Withdraw Rp 50.000.<br>
+                    • Setelah deposit berhasil, silakan unggah atau kirim screenshot bukti transfer untuk membantu proses verifikasi sehingga saldo dapat segera masuk ke akun Anda.
+                </p>
+            </div>
 
-.info-title{
-    font-weight:bold;
-    margin-bottom:5px;
-}
-
-.copy-btn{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#ff8400;
-    color:#fff;
-    font-size:15px;
-    cursor:pointer;
-}
-
-.copy-btn:hover{
-    background:#e87400;
-}
-</style>
-
-<!-- ===================== BCA ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('bca',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1920px-Bank_Central_Asia.svg.png">
-
-<div>
-
-<div class="bank-name" style="color:#0066AE;">BCA</div>
-
-<div class="bank-sub">Bank Sedang Offline</div>
+        </div>
+    </div>
 
 </div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="bca">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-**********
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-**********
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('**********')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ===================== BRI ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('bri',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BRI_2025_%28with_full_name%29.svg/500px-BRI_2025_%28with_full_name%29.svg.png">
-
-<div>
-
-<div class="bank-name" style="color:#0A49A1;">BRI</div>
-
-<div class="bank-sub">Bank Sedang Offline</div>
-
-</div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="bri">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-**********
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-**********
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('**********')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ===================== SEABANK ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('sea',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://files.klob.id/mus01/77774f7a-2b72-477f-b87d-143a0602a8fb/e8ebbd5a-e15b-4556-a510-1f94e51ed04c/SeaTalk_IMG_20230920_161013.png">
-
-<div>
-
-<div class="bank-name" style="color:#ff7a00;">SEABANK</div>
-
-<div class="bank-sub">Rekening Tujuan Deposit</div>
-
-</div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="sea">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-Dimas jaka saputra
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-901714215440
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('901714215440')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ===================== BANK JAGO ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('jago',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Bank_Jago_2026.svg/500px-Bank_Jago_2026.svg.png">
-
-<div>
-
-<div class="bank-name" style="color:#FDB600;">BANK JAGO</div>
-
-<div class="bank-sub">Rekening Tujuan Deposit</div>
-
-</div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="jago">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-Dimas jaka saputra
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-102539846287
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('102539846287')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ===================== E-WALLET DANA ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('dana',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1280px-Logo_dana_blue.svg.png">
-
-<div>
-
-<div class="bank-name" style="color:#3b82f6;">DANA</div>
-
-<div class="bank-sub">Rekening Tujuan Deposit</div>
-
-</div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="dana">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-Fahraihan alfarezha
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-081269769231
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('081269769231')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ===================== E-WALLET GOPAY ===================== -->
-
-<div class="bank-card">
-
-<div class="bank-header" onclick="toggleBank('gopay',this)">
-
-<div class="bank-left">
-
-<img class="bank-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/120px-Gopay_logo.svg.png">
-
-<div>
-
-<div class="bank-name" style="color:#00ABD6;">gopay</div>
-
-<div class="bank-sub">Rekening Tujuan Deposit</div>
-
-</div>
-
-</div>
-
-<div class="arrow">▼</div>
-
-</div>
-
-<div class="bank-detail" id="gopay">
-
-<div class="info">
-<div class="info-title">👤 Nama Rekening</div>
-Fahira salsabilla
-</div>
-
-<div class="info">
-<div class="info-title">💳 Nomor Rekening</div>
-0882017013580
-</div>
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('081269769231')">
-📋 Salin Nomor Rekening
-</button>
-
-</div>
-
-</div>
-
 
 <script>
-function toggleBank(id,el){
+function toggleDetail(id){
 
-    // Tutup semua card
-    document.querySelectorAll(".bank-detail").forEach(function(box){
-        if(box.id!==id){
-            box.style.display="none";
-        }
-    });
+    const box = document.getElementById(id);
 
-    // Reset semua panah
-    document.querySelectorAll(".arrow").forEach(function(a){
-        a.innerHTML="▼";
-    });
-
-    let detail=document.getElementById(id);
-
-    if(detail.style.display==="block"){
-
-        detail.style.display="none";
-        el.querySelector(".arrow").innerHTML="▼";
-
+    if(box.style.display === "block"){
+        box.style.display = "none";
     }else{
-
-        detail.style.display="block";
-        el.querySelector(".arrow").innerHTML="▲";
-
+        box.style.display = "block";
     }
 
 }
-</script>
-
-<div style="
-    background:#f8f9fa;
-    border-left:5px solid #3d3d3d;
-    padding:15px;
-    margin:15px 0;
-    border-radius:8px;
-    font-family:Arial, sans-serif;
-    color:#333;
-    line-height:1.6;
-    font-size:15px;
-">
-
-    <p style="margin:0;">
-        Setelah <strong>deposit berhasil</strong>, silakan unggah atau kirim
-        <strong>screenshot bukti transfer</strong> untuk membantu proses
-        verifikasi sehingga saldo dapat segera masuk ke akun Anda.
-    </p>
-
-</div> 
-
-<input type="Konfirmasi nama pengirim" placeholder="Konfirmasi nama pengirim">
-
-<button type="button"
-onclick="window.open('https://direct.lc.chat/19822417/','_blank')">
-    Livechat
-</button>
-
-</div>
-
-</div>
-
-<script>
-document.getElementById("myForm").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    // Ambil nama pengguna
-    let nama = document.getElementById("nama").value;
-
-    // Sembunyikan form pertama
-    document.getElementById("halaman1").style.display = "none";
-
-    // Tampilkan form kedua
-    document.getElementById("halaman2").style.display = "block";
-
-    // Tampilkan nama pengguna
-    document.getElementById("namaUser").textContent = nama;
-
-});
 </script>
 
 </body>
